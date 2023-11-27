@@ -15,8 +15,8 @@ import android.widget.Toast;
 public class Login_activity extends AppCompatActivity {
 
     EditText username, password;
-    TextView forgot, privacy, terms, login;
-    Button  signup;
+    TextView forgot;
+    Button  signup, login;
 
     SQLiteDatabase db;
     Cursor cursor;
@@ -29,8 +29,6 @@ public class Login_activity extends AppCompatActivity {
         username = findViewById(R.id.login_username_edittext);
         password = findViewById(R.id.login_password_edittext);
         forgot = findViewById(R.id.forgotpass_textview);
-        privacy = findViewById(R.id.privacy_textview);
-        terms = findViewById(R.id.terms_textview);
         login = findViewById(R.id.login_btn);
         signup = findViewById(R.id.signup_btn);
         login.setOnClickListener(v-> loginaccount());
@@ -72,6 +70,8 @@ public class Login_activity extends AppCompatActivity {
             }
         }
     }
+
+    // FOR FORGOT PASSWORD
 
     public void clear(){
         username.setText("");
